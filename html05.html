@@ -2,34 +2,31 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<tltle>문서연습 -하이퍼링크</title>
+		<title>문서 연습-시멘틱 태그를 활용한 영역 분리</title>
 		<style>
 		*{ margin:0; padding:0; }
-		#hd { height:140px; }
-		#content { min-height:1000px; }
-		#ft { height:120px; }
+		body, html { width:100%; }
+		header  { background-color:#333; color:#fff; height:100px; text-align:center; }
+		#content { min-height:1200px; }
+		footer { text-align:center; background-color:#333; color:#fff; height:100px; }
 		</style>
 	</head>
 	<body>
-		<header id="hd">
-			<br>헤더영역<br>
-			<nav>
-				<a href="html04.html">문서4로 이동</a> 
-				<a href="http://www.naver.com"target="_blank">네이버로 이동</a>
-				<a href="01_워드프로세서_공문서_허준.hwp">공문서 다운로드</a>
-				<a href="#ft">푸터로 이동 - 네임앵커</a>
-				<a href="mailto:pwc0132@naver.com">메일 보내기</a>
-				<a href="	tel:01023231212">전화걸기</a>
-				<a href="sms:01023231212">문자보내기</a>	
-			</nav>
-		</header>
-		<hr>
-		<div id="content">
-		
+		<div class="container">
+			<header>
+				<nav>상단메뉴</nav>
+				<nav>메인메뉴</nav>
+			</header>
+			<hr>
+			<div id="content">
+				<aside>왼쪽 사이드바</aside>
+				<section>콘텐츠</section>
+				<article>기사글</article>
+			</div>
+			<hr>
+			<footer>
+				<adress>주소 및 카피라이트</address>
+			</footer>
 		</div>
-		<hr>
-		<footer id "ft">
-			푸터영역<a href="#">위로 이동</a>
-		</footer>
 	</body>
 </html>
